@@ -16,7 +16,7 @@ The project also provides an interactive **Streamlit app** for easy predictions.
 - Dataset included (`SMSSpamCollection`)
 
 ## Run the Streamlit App
-
+```bash
 streamlit run app.py
 
 ## Install dependencies:
