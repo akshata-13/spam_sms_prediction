@@ -15,10 +15,54 @@ The project also provides an interactive **Streamlit app** for easy predictions.
 - Interactive **Streamlit web app** (`app.py`)
 - Dataset included (`SMSSpamCollection`)
 
-## Run the Streamlit App
+---
+
+## 📂 Project Structure
+smspred/
+│── app.py # Streamlit app for prediction
+│── smspred.ipynb # Notebook for training & evaluation
+│── sms+spam+collection/
+│ │── SMSSpamCollection # Dataset file
+│ │── readme # Dataset description
+│── requirements.txt # Project dependencies
+│── README.md # Documentation
+
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
 ```bash
+git clone https://github.com/akshata-13/spam_sms_prediction.git
+cd spam_sms_prediction/smspred
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+▶️ Usage
+Run the Streamlit App
 streamlit run app.py
 
-## Install dependencies:
-```bash
-pip install -r requirements.txt
+📊 Dataset
+
+The dataset used is SMSSpamCollection (UCI ML Repository).
+It contains ham (non-spam) and spam SMS messages.
+
+📈 Model
+
+Vectorizer: TF-IDF
+
+Classifier: Logistic Regression
+
+Custom Probability Threshold: 0.3
+
+Saved model → spam_model.pkl
+
+Saved vectorizer → tfidf_vectorizer.pkl
+
+📊 Results
+
+📊 Custom Threshold: 0.3
+✅ Accuracy: 97.94%
