@@ -38,6 +38,7 @@ streamlit run app.py
 Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/akshata-13/spam_sms_prediction
+cd spam_sms_prediction/smspred
 pip install -r requirements.txt
 
 
