@@ -1,56 +1,46 @@
 # 📱 SMS Spam Detection
 
-A Machine Learning project to detect whether an SMS message is **Spam** or **Ham (Not Spam)**.  
-It uses **TF-IDF Vectorization** and a trained **Logistic Regression** classifier with a **custom probability threshold (0.3)** to improve spam detection.  
-The project also provides an interactive **Streamlit app** for easy predictions.
+A Machine Learning project that classifies SMS messages as **Spam** or **Ham (Not Spam)**.  
+It uses **TF-IDF Vectorization** and a trained **Logistic Regression** model with a **custom probability threshold (0.3)** to improve spam detection accuracy.  
+The project also provides a simple **Streamlit web app** for real-time predictions.
 
 ---
 
 ## 🚀 Features
-- Clean and preprocess SMS text
-- Convert text to numerical features using **TF-IDF**
-- Classify messages with **Logistic Regression**
-- Uses a **custom probability threshold (0.3)** for better spam detection
-- Evaluate model using accuracy, confusion matrix & classification report
-- Interactive **Streamlit web app** (`app.py`)
-- Dataset included (`SMSSpamCollection`)
+✔️ Preprocessing of SMS text (cleaning & tokenization)  
+✔️ Text vectorization using **TF-IDF**  
+✔️ Classification with **Logistic Regression**  
+✔️ **Custom probability threshold (0.3)** for improved spam recall  
+✔️ Detailed evaluation (accuracy, classification report)  
+✔️ Interactive **Streamlit app** for easy predictions  
 
 ---
 
 ## 📂 Project Structure
+```bash
 smspred/
-│── app.py # Streamlit app for prediction
-│── smspred.ipynb # Notebook for training & evaluation
-│── sms+spam+collection/
-│ │── SMSSpamCollection # Dataset file
-│ │── readme # Dataset description
-│── requirements.txt # Project dependencies
-│── README.md # Documentation
-
+├── app.py                     # Streamlit app for prediction
+├── smspred.ipynb              # Jupyter Notebook (training & evaluation)
+├── spam_model.pkl             # Saved Logistic Regression model
+├── tfidf_vectorizer.pkl       # Saved TF-IDF vectorizer
+├── sms+spam+collection/
+│   ├── SMSSpamCollection      # Dataset file
+│   └── readme                 # Dataset description
+├── requirements.txt           # Project dependencies
+└── README.md                  # Documentation
 
 ---
 
-## ⚙️ Installation
+## Dataset
 
-Clone the repository:
-```bash
-git clone https://github.com/akshata-13/spam_sms_prediction.git
-cd spam_sms_prediction/smspred
+The dataset used is SMSSpamCollection (from UCI ML Repository).
+It contains labeled SMS messages in two categories:
 
-Install dependencies:
+Ham → Normal messages
 
-pip install -r requirements.txt
+Spam → Unwanted/advertisement messages
 
-▶️ Usage
-Run the Streamlit App
-streamlit run app.py
-
-📊 Dataset
-
-The dataset used is SMSSpamCollection (UCI ML Repository).
-It contains ham (non-spam) and spam SMS messages.
-
-📈 Model
+## 🤖 Model
 
 Vectorizer: TF-IDF
 
@@ -62,7 +52,7 @@ Saved model → spam_model.pkl
 
 Saved vectorizer → tfidf_vectorizer.pkl
 
-📊 Results
+## 📈 Results
 
 📊 Custom Threshold: 0.3
 ✅ Accuracy: 97.94%
